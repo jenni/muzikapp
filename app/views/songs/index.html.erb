@@ -1,0 +1,17 @@
+<h1>Upload a song</h1>
+<%= form_tag songs_path, enctype: 'multipart/form-data' do %>
+<%= file_field_tag :file  %>
+<%= submit_tag 'Upload file' %>
+<% end %>
+
+<h1>All Songs</h1>
+<div>
+  <% @songs.each do |song| %>
+  <ul>
+    <%= link_to song.name, song.url %>
+    ///
+    <%= link_to "Delete",  song.url + song.name, :confirm => 'Are you sure you want to delete ' + song.name + '?' %>
+  </ul>
+  <% end %>
+
+</div>
