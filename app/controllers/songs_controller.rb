@@ -22,7 +22,7 @@ class SongsController < ApplicationController
     url: obj.public_url,
     name: obj.key
     )
-  
+
     #save the upload
     if @song.save
       redirect_to songs_path, notice: 'File successfully uploaded'
@@ -33,13 +33,14 @@ class SongsController < ApplicationController
   end
 
   def delete
+    #delete song from DB
     @song = Song.find_by(params[:file])
     @song.destroy
     respond_to do |format|
       format.html { redirect_to songs_path }
       format.json { head :no_content }
     end
-
+    #delete song from bucket
     bucket = S3.bucket(S3_BUCKET.name)
     obj = bucket.object(params[:song])
     obj.delete
