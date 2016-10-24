@@ -11,20 +11,18 @@ class SongsController < ApplicationController
     bucket = S3.bucket(S3_BUCKET.name)
 
     obj = bucket.object(file_name)
-    #byebug
-
     #upload the file:
     obj.put(
-      acl: "public-read",
-      body: file_to_upload
-      )
+    acl: "public-read",
+    body: file_to_upload
+    )
 
     #create an object for the upload
     @song = Song.new(
-      url: obj.public_url,
-      name: obj.key
-      )
-
+    url: obj.public_url,
+    name: obj.key
+    )
+  
     #save the upload
     if @song.save
       redirect_to songs_path, notice: 'File successfully uploaded'
@@ -35,6 +33,17 @@ class SongsController < ApplicationController
   end
 
   def delete
+    @song = Song.find_by(params[:file])
+    @song.destroy
+    respond_to do |format|
+      format.html { redirect_to songs_path }
+      format.json { head :no_content }
+    end
+
+    bucket = S3.bucket(S3_BUCKET.name)
+    obj = bucket.object(params[:song])
+    obj.delete
+
   end
 
 end

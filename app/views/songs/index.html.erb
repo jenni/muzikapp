@@ -9,8 +9,9 @@
   <% @songs.each do |song| %>
   <ul>
     <%= link_to song.name, song.url %>
-    ///
-    <%= link_to "Delete",  song.url + song.name, :confirm => 'Are you sure you want to delete ' + song.name + '?' %>
+    --
+
+    <%= link_to "Delete",  "songs/delete/?song=" + song.name, :confirm => 'Are you sure you want to delete ' + song.name + '?' %>
   </ul>
   <% end %>
 

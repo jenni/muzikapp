@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'songs/index'
 
-  get 'songs/create'
+  get "songs/upload", :as => "upload"
+  get "songs/delete", :as => "delete"
 
-  get 'songs/delete'
-
-  root 'songs#index'
+  root :to => "songs#index"
 
   resources :songs
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
