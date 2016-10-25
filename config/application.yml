@@ -9,6 +9,10 @@
 # production:
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
-development:
+  development:
+  AWS_ACCESS_KEY_ID: AKIAIFGET4OSK7F6QUHQ
+  AWS_SECRET_ACCESS_KEY: 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
+
+  production:
   AWS_ACCESS_KEY_ID: AKIAIFGET4OSK7F6QUHQ
   AWS_SECRET_ACCESS_KEY: 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
