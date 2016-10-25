@@ -37,7 +37,7 @@ class SongsController < ApplicationController
     @song = Song.find_by(params[:file])
     @song.destroy
     respond_to do |format|
-      format.html { redirect_to songs_path }
+      format.html { redirect_to songs_path, notice: 'File successfully deleted'}
       format.json { head :no_content }
     end
     #delete song from bucket

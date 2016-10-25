@@ -1,18 +1,51 @@
-<h1>Upload a song</h1>
-<%= form_tag songs_path, enctype: 'multipart/form-data' do %>
-<%= file_field_tag :file  %>
-<%= submit_tag 'Upload file' %>
-<% end %>
+<!DOCTYPE html>
 
-<h1>All Songs</h1>
-<div>
-  <% @songs.each do |song| %>
-  <ul>
-    <%= link_to song.name, song.url %>
-    --
+<html>
 
-    <%= link_to "Delete",  "songs/delete/?song=" + song.name, :confirm => 'Are you sure you want to delete ' + song.name + '?' %>
-  </ul>
+<head>
+
+  <title>Muzikz</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+--><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+  <% if notice %>
+  <p id="notice" class="alert notice-info"><%= notice %></p>
   <% end %>
-
-</div>
+  <% if alert %>
+  <p id="alert" class="alert alert-info"><%= alert %></p>
+  <% end %>
+  <div class="header-fill"></div>
+      <br>
+      <h2>u p l o a d s o n g</h2>
+      <%= form_tag songs_path, enctype: 'multipart/form-data' do %>
+      <%= file_field_tag :file  %>
+      <%= submit_tag 'Upload file' %>
+      <% end %>
+      <br><br>
+      <h2>y o u r p l a y l i s t</h2>
+      <div class="wrapper">
+        <% @songs.each do |song| %>
+        <div id="wrapper">
+          <div id="one">
+          <%= link_to song.name, song.url %>
+          </div>
+          <div id="two">
+          <%= audio_tag(song.url, controls: true) %>
+          </div>
+          <div id="three">
+          ///
+          <%= link_to "Delete >",  "songs/delete/?song=" + song.name, :confirm => 'Are you sure you want to delete ' + song.name + '?' %>
+          </div>
+      </div>
+    </div>
+        <% end %>
+    </div>
+</body>
