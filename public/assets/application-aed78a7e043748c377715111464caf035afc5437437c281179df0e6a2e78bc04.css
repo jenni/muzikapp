@@ -1,0 +1,98 @@
+/* line 1, /Users/Jen/workspace/muzikapp/app/assets/stylesheets/index.scss */
+body {
+  background-color: white;
+  font-family: 'Montserrat', 'Product Sans', serif;
+  text-align: center;
+  font-size: 15px;
+  line-height: 2em;
+}
+
+/* line 9, /Users/Jen/workspace/muzikapp/app/assets/stylesheets/index.scss */
+.wrapper {
+  text-align: center;
+}
+
+/* line 12, /Users/Jen/workspace/muzikapp/app/assets/stylesheets/index.scss */
+#wrapper {
+  display: table;
+  table-layout: fixed;
+  margin-left: 5%;
+  width: 90%;
+  height: 25px;
+  background-color: #fafafa;
+  border-radius: 5px;
+}
+
+/* line 21, /Users/Jen/workspace/muzikapp/app/assets/stylesheets/index.scss */
+#wrapper div {
+  display: table-cell;
+  height: 5%;
+}
+
+/* line 27, /Users/Jen/workspace/muzikapp/app/assets/stylesheets/index.scss */
+h1 {
+  font-size: 50px;
+  color: white;
+}
+
+/* line 32, /Users/Jen/workspace/muzikapp/app/assets/stylesheets/index.scss */
+h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+/* line 37, /Users/Jen/workspace/muzikapp/app/assets/stylesheets/index.scss */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* line 42, /Users/Jen/workspace/muzikapp/app/assets/stylesheets/index.scss */
+a:hover {
+  color: #EC058E;
+}
+
+/* line 46, /Users/Jen/workspace/muzikapp/app/assets/stylesheets/index.scss */
+.header-fill {
+  text-align: center;
+  height: 2%;
+  background-color: #EC058E;
+  margin-top: none;
+  padding-top: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+/* line 58, /Users/Jen/workspace/muzikapp/app/assets/stylesheets/index.scss */
+.content {
+  margin-top: 2%;
+}
+
+/* line 62, /Users/Jen/workspace/muzikapp/app/assets/stylesheets/index.scss */
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  left: 0;
+  padding: 1rem;
+  background-color: #fafafa;
+  text-align: center;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
