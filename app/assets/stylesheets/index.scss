@@ -23,6 +23,12 @@ body {
     height:5%;
 }
 
+
+h1 {
+  font-size: 50px;
+  color: white;
+}
+
 h2 {
   font-size: 25px;
   text-transform: uppercase;
@@ -38,8 +44,27 @@ a:hover {
 }
 
 .header-fill {
-    height: 10px;
+    text-align: center;
+    height: 2%;
     background-color: #EC058E;
     margin-top:none;
     padding-top: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.content {
+  margin-top: 2%;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  left: 0;
+  padding: 1rem;
+  background-color: #fafafa;
+  text-align: center;
 }

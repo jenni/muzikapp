@@ -11,6 +11,7 @@
   <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 --><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/2788426916.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -24,12 +25,14 @@
   <% end %>
   <div class="header-fill"></div>
       <br>
+      <div class="content">
       <h2>u p l o a d s o n g</h2>
+
       <%= form_tag songs_path, enctype: 'multipart/form-data' do %>
       <%= file_field_tag :file  %>
       <%= submit_tag 'Upload file' %>
       <% end %>
-      <br><br>
+      <br>
       <h2>y o u r p l a y l i s t</h2>
       <div class="wrapper">
         <% @songs.each do |song| %>
@@ -41,11 +44,18 @@
           <%= audio_tag(song.url, controls: true) %>
           </div>
           <div id="three">
-          ///
-          <%= link_to "Delete >",  "songs/delete/?song=" + song.name, :confirm => 'Are you sure you want to delete ' + song.name + '?' %>
+            ·
+          <%= link_to "trash it",  "songs/delete/?song=" + song.name, :confirm => 'Are you sure you want to delete ' + song.name + '?' %>
+          ·
           </div>
       </div>
     </div>
         <% end %>
     </div>
+  </div>
+  <div class="footer">
+    <span><a href="https://github.com/jen-v" target="_blank"><i class="lk fa fa-github-alt fa-lg"></i></a></span>
+    <span><a href="mailto: jvarelalijo at gmail dot com" target="_blank"><i class="lk fa fa-envelope fa-lg"></i></a></span>
+    <span><a href="https://www.linkedin.com/in/jen-lijo"><i class="lk fa fa-linkedin-square fa-lg" target="_blank"></i></a></span>
+  </div>
 </body>

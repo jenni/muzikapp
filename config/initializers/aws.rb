@@ -1,8 +1,5 @@
-require 'json'
-creds = JSON.load(File.read('/Users/Jen/workspace/secrets.json'))   #read file from *external* directory
-
 Aws.config.update({
-  credentials: Aws::Credentials.new(creds['AWS']['AWS_ACCESS_KEY_ID'], creds['AWS']['AWS_SECRET_ACCESS_KEY']),
+  credentials: Aws::Credentials.new('AKIAIC5SY67DTK7HSY5A', 'mJXUvcj7APplHiWIUKdK9L4HOpikFIC+6t16EpO/'),
   region: 'eu-central-1'
 })
 
