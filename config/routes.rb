@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-
+  devise_for :users
+  resources :users
   get "songs/upload", :as => "upload"
   get "songs/delete", :as => "delete"
+  get "songs/index", :as => "index"
 
   root :to => "songs#index"
 

@@ -24,6 +24,17 @@
   <p id="alert" class="alert alert-info"><%= alert %></p>
   <% end %>
   <div class="header-fill"></div>
+
+  <div class="navbar-collapse collapse center">
+    <ul class="nav navbar-nav">
+
+      <% if user_signed_in? %>
+      <%= link_to(" # Log out #{current_user.first_name} #", destroy_user_session_path, :method => :delete) %>
+      <% end %>
+
+    </ul>
+  </div>
+
       <br>
       <div class="content">
       <h2>u p l o a d s o n g</h2>
