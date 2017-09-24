@@ -1,24 +1,3 @@
-# README
+# MUZIKAPP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![alt text](https://user-images.githubusercontent.com/17571391/30783346-cc38b79a-a141-11e7-880c-43eb9b492ae1.png)
